@@ -1,7 +1,7 @@
 # Ensemble Learning Priors Driven Deep Unfolding for Scalable Snapshot Compressive Imaging [PyTorch]
 #### News
 - **2022.07.03 :** Our paper has been accepted by ECCV 2022.
-- **2022.01.25 :** Our work (hhttps://arxiv.org/abs/2201.10419) is on arxiv.
+- **2022.01.25 :** Our work (https://arxiv.org/abs/2201.10419) is on arxiv.
 ## Abstract 
 Snapshot compressive imaging (SCI) can record the 3D information by a 2D measurement and from this 2D measurement to  reconstruct the original 3D information by reconstruction algorithm. As we can see, the reconstruction algorithm plays a vital role in SCI. Recently, deep learning algorithm show its outstanding ability, outperforming the traditional algorithm. Therefore, to improve deep learning algorithm reconstruction accuracy is an inevitable topic for SCI. Besides, deep learning algorithms are usually limited by scalability, and a well trained model in general can not be applied to new systems if lacking the new training process. To address these problems, we develop the ensemble learning priors to further improve the reconstruction accuracy and propose the scalable learning to empower  deep learning the scalability just like the traditional algorithm. What's more, our algorithm has achieved the state-of-the-art results, outperforming existing algorithms. Extensive results on both simulation and real datasets demonstrate the superiority of our proposed algorithm.
 # Comparison of some results
