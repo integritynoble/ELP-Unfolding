@@ -59,7 +59,7 @@ python test.py  or  bash test.sh
 ## Results
 ### For Benchmark dataset
 
-![Results](fig/Benchmark.jpg)
+![Results](fig/benchmark.jpg)
 
 ### For scalable dataset
 
@@ -70,9 +70,9 @@ python test.py  or  bash test.sh
 If you find the code helpful in your resarch or work, please cite the following paper.
 ```
 @inproceedings{,
-  title={},
-  author={},
-  booktitle={IEEE International Conference on Computer Vision (ICCV)},
-  year={2021}
+  title={Ensemble Learning Priors Driven Deep Unfolding for Scalable Video Snapshot Compressive Imaging},
+  author={Chengshuai Yang, Shiyuzhang,Xinyuan},
+  booktitle={IEEE European Conference on Computer Vision (ECCV)},
+  year={2022}
 }
 ```
