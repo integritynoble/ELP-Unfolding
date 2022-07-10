@@ -160,7 +160,9 @@ if __name__ == "__main__":
 					 help="Number of total training epochs")					
 	parser.add_argument("--resume_training", "--r", action='store_true',default=False,
 						help="resume training from a previous checkpoint")
-	parser.add_argument("--lr", type=float, default=2e-5, \
+	parser.add_argument("--use_first_stage", "--r1", action='store_true',default=False,
+						help="resume training from a previous checkpoint")
+	parser.add_argument("--lr", type=float, default=1e-4, \
 					 help="Initial learning rate")
 
 	parser.add_argument("--save_every_epochs", type=int, default=30,\

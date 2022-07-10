@@ -35,12 +35,17 @@ def	resume_training(argdict):
 			#for i in range(0,argdict['priors']-1):		
 			#	color_SCI_backward.all[i+1]=scale1(color_SCI_backward.all[i+1],color_SCI_backward.all[0],argdict)			
 			optimizer.load_state_dict(checkpoint['optimizer'])
-			for param_group in optimizer.param_groups:
-				current_lr=param_group["lr"]
+			if argdict['use_first_stage']:
+				pass
+				current_lr=argdict['lr']
+			else:
+				for param_group in optimizer.param_groups:
+					current_lr=param_group["lr"]
+				epoch=checkpoint['epoch']
 			#new_epoch = argdict['epochs']					
 			#optimizer = optim.SGD(color_SCI_backward.parameters(), lr=current_lr)
 			optimizer = optim.Adam(SCI_backward.parameters(), lr=current_lr)	
-			epoch=checkpoint['epoch']
+			
 		else:
 			raise Exception("Couldn't resume training with checkpoint {}".\
 				   format(resumef))
@@ -104,7 +109,7 @@ def validate_and_log(img_out, img_val, name, writer,logger, epoch,args):
 		writer.add_image(name+'frame_id {}'.format(0+1)+'_Orginal', img_val[0,0,:,:].unsqueeze(0).repeat(3,1,1), epoch)
 	psnr_val,ssim_val = batch_psnr_ssim(img_out, img_val, 1.)
 	#print("\n"+ name+"[epoch %d] PSNR_val: %.4f," % (epoch+1, psnr_val))
-	logger.info("\t"+name1+"[epoch {}] PSNR_val: {:1.4f} SSIM_val: {:1.4f}".format(epoch+1, psnr_val, ssim_val))
+	logger.info("\t"+name1+"] PSNR_val: {:1.4f} SSIM_val: {:1.4f}".format( psnr_val, ssim_val))
 	writer.add_scalar(name+'psnr', psnr_val, epoch)
 	writer.add_scalar(name+'ssim', ssim_val, epoch)
 	writer.add_image(name+'frame_id {}'.format(0+1)+'_Reconstructed', img_out[0,0,:,:].unsqueeze(0).repeat(3,1,1), epoch)

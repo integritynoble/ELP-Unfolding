@@ -115,9 +115,9 @@ if __name__ == "__main__":
 					help="AL iteration number")##14   3  9 
 	parser.add_argument("--rand_num", type=int, default=3, 	\
 					help="rand number in every batch") #512 
-	parser.add_argument("--init_channels", type=int, default=64, \
+	parser.add_argument("--init_channels", type=int, default=512, \
 					 help="Number of init_channels")# 72
-	parser.add_argument("--pres_channels", type=int, default=64, \
+	parser.add_argument("--pres_channels", type=int, default=512, \
 					 help="Number of pres_channels")
 	parser.add_argument("--init_input", type=int, default=24, \
 					 help="Number of init_input")# when you use previous pretrained (nonscalable), set default=8; when you resume or not resume, set default=24.  

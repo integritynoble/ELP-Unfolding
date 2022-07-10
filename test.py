@@ -117,7 +117,7 @@ if __name__ == "__main__":
 						help="Number of training epochs to save state")	# Dirs
 	parser.add_argument("--log_dir", type=str, default="/home/chengshuai/data/ELPunfolding/result/main_a40", \
 					 help='path of log files')
-	parser.add_argument("--code_dir", type=str, default='/home/chengshuai/data/ELPunfolding/data/traindata/DAVIS-480-train/code_2050_25',						
+	parser.add_argument("--code_dir", type=str, default='/home/chengshuai/data/ELPunfolding/data/traindata/DAVIS-480-train/code',						
 						help='path of split set file')
 	parser.add_argument("--orig_dir", type=str, default='/home/chengshuai/data/ELPunfolding/data/traindata/DAVIS-480-train/origd24n',						
 						help='path of orig')

@@ -191,7 +191,7 @@ if __name__ == "__main__":
 	parser.add_argument("--pres_channels", type=int, default=64, \
 					 help="Number of pres_channels")#512
 	parser.add_argument("--init_input", type=int, default=24, \
-					 help="Number of init_input")# when you use previous pretrained (nonscalable), set default=8; when you resume or not resume, set default=24.  
+					 help="Number of init_input") 
 	parser.add_argument("--pres_input", type=int, default=24, \
 					 help="Number of pres_input") 
 	parser.add_argument("--priors", type=int, default=6, \
@@ -200,7 +200,9 @@ if __name__ == "__main__":
 					 help="Number of total training epochs")					
 	parser.add_argument("--resume_training_pre", "--r0", action='store_true',default=False,
 						help="resume training from a previous checkpoint")
-	parser.add_argument("--resume_training", "--r", action='store_true',default=False,
+	parser.add_argument("--resume_training", "--r", action='store_true',default=True,
+						help="resume training from a previous checkpoint")
+	parser.add_argument("--use_first_stage", "--r1", action='store_true',default=False,
 						help="resume training from a previous checkpoint")
 	parser.add_argument("--lr", type=float, default=1e-4, \
 					 help="Initial learning rate")	
