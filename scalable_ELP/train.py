@@ -33,7 +33,7 @@ def main(**args):
 	"""
 	torch.backends.cudnn.benchmark = True
 	use_cuda = torch.cuda.is_available()
-	device = torch.device("cuda:0" if use_cuda else "cpu")
+	device = torch.device("cuda:{}".format(args['GPU']) if use_cuda else "cpu")
 	wandb.init(config=args,project="scaleble_ELP_a40")#new
 	# Load dataset
 	print('> Loading datasets ...')
@@ -178,6 +178,8 @@ if __name__ == "__main__":
 	parser.add_argument("--batch_size", type=int, default=3, 	\
 					 help="Training batch size")#130
 	
+	parser.add_argument("--GPU", type=int, default=0, 	\
+					help="the GPU ID")##
 	parser.add_argument("--temporal_length", type=int, default=24, 	\
 					 help="Training temporal_length")
 	parser.add_argument("--patchsize", type=int, default=256, 	\
