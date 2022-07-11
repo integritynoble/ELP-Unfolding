@@ -18,7 +18,7 @@ def main(**args):
 	"""
 	torch.backends.cudnn.benchmark = True
 	use_cuda = torch.cuda.is_available()
-	device = torch.device("cuda:0" if use_cuda else "cpu")
+	device = torch.device("cuda:{}".format(args['GPU']) if use_cuda else "cpu")
 	wandb.init(config=args,project="test_a40")#new
 	# Load dataset
 	
@@ -95,7 +95,9 @@ if __name__ == "__main__":
 					help="Training batch size")
 	parser.add_argument("--iter__number", type=int, default=8, 	\
 					help="AL iteration number")##14   3  9 
-	  
+	
+	parser.add_argument("--GPU", type=int, default=0, 	\
+					help="the GPU ID")##
 	parser.add_argument("--init_channels", type=int, default=64, \
 					 help="Number of init_channels")# 72
 	parser.add_argument("--pres_channels", type=int, default=64, \
