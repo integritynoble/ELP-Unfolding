@@ -13,7 +13,7 @@ def	resume_training(argdict):
 	""" Resumes previous training or starts anew
 	"""
 	use_cuda = torch.cuda.is_available()
-	device = torch.device("cuda:0" if use_cuda else "cpu")
+	device = torch.device("cuda:{}".format(argdict['GPU']) if use_cuda else "cpu")
 	#l1,l2=argdict['patchsize'],argdict['patchsize']
 	if_train=True	
 	SCI_backward=SCI_backwardcollect(argdict)
@@ -56,7 +56,7 @@ def	resume_training(argdict):
 		#color_SCI_backward=nn.DataParallel(color_SCI_backward,device_ids=[6,7,8])	 
 		gpu0_bsz = 3
 		acc_grad = 1
-		SCI_backward=BalancedDataParallel(gpu0_bsz // acc_grad,SCI_backward,device_ids=[0])#		
+		SCI_backward=BalancedDataParallel(gpu0_bsz // acc_grad,SCI_backward,device_ids=[argdict['GPU']])#		
 			
 	return SCI_backward, optimizer, epoch
 
