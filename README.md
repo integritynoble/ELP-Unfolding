@@ -97,7 +97,7 @@ If you find the code helpful in your resarch or work, please cite the following 
 ```
 @inproceedings{,
   title={Ensemble Learning Priors Driven Deep Unfolding for Scalable Video Snapshot Compressive Imaging},
-  author={Chengshuai Yang, Shiyu Zhang,Xin Yuan},
+  author={Chengshuai Yang, Shiyu Zhang, Xin Yuan},
   booktitle={IEEE European Conference on Computer Vision (ECCV)},
   year={2022}
 }
