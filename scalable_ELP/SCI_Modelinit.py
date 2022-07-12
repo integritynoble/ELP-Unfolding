@@ -74,9 +74,11 @@ class SCIbackwardinit(nn.Module):
        #T_or=torch.ones(batch_size,head_num,L_num)	
        #  yb = A(theta+b); 	v = (theta+b)+At((y-yb)./(mask_sum+gamma)) 
        #  yb = A(v+b); 	x = (v+b)+At((y-yb)./(mask_sum+gamma)), b=λ_2−𝐴^𝑇 λ_1, gamma=γ_2/γ_1        
-        mask_sum=torch.sum(mask,1,keepdim=True)
+        mask_sum1=torch.sum(mask,1,keepdim=True)
+        mask_sum1[mask_sum1==0]=1
+        measurement_mean=measurement/mask_sum1
+        mask_sum=torch.sum(mask**2,1,keepdim=True)
         mask_sum[mask_sum==0]=1
-        measurement_mean=measurement/mask_sum
         x_list,v_list = [],[]
         batch, C, H, W = mask.shape
         lamda_1=torch.zeros_like(measurement)
