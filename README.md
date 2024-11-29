@@ -34,7 +34,9 @@ $ pip install scipy
 ## Test
 ### For the Benchmark
 
-Download our trained model from the [Google Drive](https://drive.google.com/file/d/1yxX_jjBQF73LfFFMV_2GlkpUNosWq_C2/view?usp=sharing) and place it under the log_dir (your path) folder. 
+Download our trained model from  [The file shared through the cloud drive: ckptall.pth
+Link: https://pan.baidu.com/s/111cgc8aBodos8r4OoCGWPg?pwd=7y6g
+Access code: 7y6g] and place it under the log_dir (your path) folder. 
 ```shell
 cd ./ELP_Unfolding
 python test.py  or  bash test.sh
@@ -42,15 +44,18 @@ python test.py  or  bash test.sh
 
 ### For the Scalable
 
-Download our trained model from the [Google Drive](https://drive.google.com/file/d/1--fcQrfeVKJnQzFLWCIQ6o0HrdCq_Cmk/view?usp=sharing) and place it under the log_dir (your path)folder. 
+Download our trained model from  [The file shared through the cloud drive: ckptallS.pth
+Link: https://pan.baidu.com/s/1iojFLckti76use8UJUldjg?pwd=59di
+Access code: 59di] and place it under the log_dir (your path)folder. 
 ```shell
 cd ./ELP_Unfolding/scalable
 python test.py  or  bash test.sh
 ```
 
 ## Train
-Download our trained model from the [File shared via network disk: traindata
-Link: https://pan.baidu.com/s/1EqrnwD0KGeeh_Mh57VVXoA?pwd=37xi Extraction code: 37xi] and place it under the traindata folder. 
+Download our traineing dataset from  [The file shared through the cloud drive: traindata
+Link: https://pan.baidu.com/s/12gj5OUOkB7IQ4XB71Fftlw?pwd=hwji
+Access code: hwji] and place it under the traindata folder. 
 ### For the Benchmark
 ```shell
 cd ./ELP_Unfolding
