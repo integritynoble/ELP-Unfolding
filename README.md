@@ -49,7 +49,8 @@ python test.py  or  bash test.sh
 ```
 
 ## Train
-Download our trained model from the [Google Drive](https://drive.google.com/drive/folders/1nFI5LFqgowvlBUdO8O1jypq2xqTu2EcD?usp=sharing) and place it under the traindata folder. 
+Download our trained model from the [File shared via network disk: traindata
+Link: https://pan.baidu.com/s/1EqrnwD0KGeeh_Mh57VVXoA?pwd=37xi Extraction code: 37xi] and place it under the traindata folder. 
 ### For the Benchmark
 ```shell
 cd ./ELP_Unfolding
